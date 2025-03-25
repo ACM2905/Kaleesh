@@ -1,46 +1,118 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>project
-  </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: black;
+        }
+        table {
+            margin-top: px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+        .m1 {
+            width: 900px;
+            height: 900px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let name = document.forms["appForm"]["name"].value;
+            let age = document.forms["appForm"]["age"].value;
+            let email = document.forms["appForm"]["email"].value;
+            let course = document.forms["appForm"]["course"].value;
+            let resume = document.forms["appForm"]["resume"].value;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+            if (age === "" || age <= 0) {
+                alert("Please enter a valid age.");
+                return false;
+            }
+            if (email.trim() === "" || !email.includes("@")) {
+                alert("Please enter a valid email.");
+                return false;
+            }
+            if (course === "") {
+                alert("Please select a course.");
+                return false;
+            }
+            if (resume === "") {
+                alert("Please upload your resume.");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
 </head>
-<body bgcolor="cyan">
-  <center>
-    <h1>Welcom to the webside<hr> <cm style="color:white;"> Thish is a chandra mohan project</cm></h1>
-    <h5>this webside uses for your helps</h5>
-  </center>
-<hr>
-  <form>
-    <table>
-      <tr>
-        <td>Name</td><td><input type="text" placeholder=" enter your name"</td>
-      </tr>
-        <tr><td>Age</td><td><input type="number" placeholder="enter your age"</td></tr>
-          
-          <tr><td>Gender</td><td><input type="radio" name="kk">male
-          <input type="radio" name=kk>female</tr>
-          <tr><td>Email</td><td><input type="email" placeholder="enter your email id"></td></tr>
-          <tr><td>Select a cours</h6></td><td><select><option>BSc.cs,.</option><option>BA.tamil</option><option>BA.english</option></select></td></tr> 
-          <tr><td>Upload your resume</td><td><input type="file"></td></tr>
-        <tr><td><input type="reset"</td><td><input type="submit"</td></tr>
-    </table>
-  </form>
-          <centar>
-           <img src="/storage/emulated/0/Download/images - 2025-03-25T083257.854.jpeg" alt="image">
-          </centar>
+<body>
+    <center>
+        <h1>Welcome All</h1>
+        <hr>
+        <h3>Welcome to the Application Form</h3>
+        <h5>This is a Chandra Mohan project</h5>
+        <hr>
+
+        <form name="appForm" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" placeholder="Enter your age"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Enter your email ID"></td>
+                </tr>
+                <tr>
+                    <td>Select a Course</td>
+                    <td>
+                        <select name="course">
+                            <option value="">Select</option>
+                            <option value="BSc CS">BSc CS</option>
+                            <option value="BA Tamil">BA Tamil</option>
+                            <option value="BA English">BA English</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload Your Resume</td>
+                    <td><input type="file" name="resume"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Reset"></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+
+        <center>
+            <img src="/storage/emulated/0/Download/images - 2025-03-25T083257.854.jpeg" alt="image">
             <br>
-            <centar>
-          <a href="https://acm2905.github.io/PORTFOLIO/">Chandra Mohan project</a>
-            </centar>
-          <style>
-          h1{color:black;}
-          
-          img{
-            width:200px;
-            height:200px;
-            margin:20px;
-          }
-          
-          </style>
-</body>
-</html>
+            <a href="https://acm2905.github.io/PORTFOLIO/">Chandra Mohan Project</a>
         
+</body>
+                      </html>
